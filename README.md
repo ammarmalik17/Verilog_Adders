@@ -146,7 +146,7 @@ To run the Verilog simulations, you'll need a Verilog simulation tool such as:
 Clone this repository to your local machine using:
 
 ```bash
-git clone https://github.com/yourusername/verilog-adders.git
+git clone https://github.com/ammarmalik17/verilog-adders.git
 cd verilog-adders
 ```
 
@@ -164,7 +164,3 @@ This project demonstrates the design of basic digital circuits like Half Adders,
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to replace `yourusername` with your actual GitHub username in the cloning instructions. You can also add any additional details or customization based on your specific project requirements.
