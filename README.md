@@ -40,27 +40,21 @@ The project is structured as follows:
 
 ```
 .
-├── half_adder
-│   ├── half_adder_gate_level.v
-│   ├── half_adder_dataflow_level.v
-│   ├── half_adder_behavioral_level.v
-│   ├── tb_half_adder.v
-├── full_adder
-│   ├── full_adder_gate_level.v
-│   ├── full_adder_dataflow_level.v
-│   ├── full_adder_behavioral_level.v
-│   ├── tb_full_adder.v
-├── four_bit_adder
-│   ├── four_bit_adder_gate_level.v
-│   ├── four_bit_adder_dataflow_level.v
-│   ├── four_bit_adder_behavioral_level.v
-│   ├── tb_four_bit_adder.v
-└── README.md
+├── README.md                         # Project documentation
+├── half_adder_gate_level.v            # Half Adder - Gate Level
+├── half_adder_dataflow_level.v        # Half Adder - Dataflow Level
+├── half_adder_behavioral_level.v      # Half Adder - Behavioral Level
+├── full_adder_gate_level.v            # Full Adder - Gate Level
+├── full_adder_dataflow_level.v        # Full Adder - Dataflow Level
+├── full_adder_behavioral_level.v      # Full Adder - Behavioral Level
+├── four_bit_adder_gate_level.v        # 4-bit Adder - Gate Level
+├── four_bit_adder_dataflow_level.v    # 4-bit Adder - Dataflow Level
+├── four_bit_adder_behavioral_level.v  # 4-bit Adder - Behavioral Level
+├── tb_half_adder.v                    # Test Bench for Half Adders
+├── tb_full_adder                      # Test Bench for Full Adders
+└── tb_four_bit_adder.v                # Test Bench for 4-bit Adders
 ```
 
-- **`half_adder/`**: Contains the Verilog files for the Half Adder designs and the corresponding test bench.
-- **`full_adder/`**: Contains the Verilog files for the Full Adder designs and the corresponding test bench.
-- **`four_bit_adder/`**: Contains the Verilog files for the 4-bit Adder designs and the corresponding test bench.
 - **`README.md`**: This documentation file.
 
 ## Half Adder
@@ -69,19 +63,19 @@ The project is structured as follows:
 
 The Gate Level design of the Half Adder describes the circuit using basic logic gates (`and`, `xor`). This level provides a direct correspondence between the Verilog code and the actual hardware gates.
 
-**File:** `half_adder/half_adder_gate_level.v`
+**File:** `half_adder_gate_level.v`
 
 ### Dataflow Level
 
 The Dataflow Level design describes the Half Adder using Boolean expressions. This abstraction level focuses on the flow of data through the circuit.
 
-**File:** `half_adder/half_adder_dataflow_level.v`
+**File:** `half_adder_dataflow_level.v`
 
 ### Behavioral Level
 
 The Behavioral Level design describes the Half Adder using high-level constructs like `always` blocks, making it easier to describe complex behavior without focusing on gate-level details.
 
-**File:** `half_adder/half_adder_behavioral_level.v`
+**File:** `half_adder_behavioral_level.v`
 
 ## Full Adder
 
@@ -89,19 +83,19 @@ The Behavioral Level design describes the Half Adder using high-level constructs
 
 The Gate Level design of the Full Adder uses basic logic gates to implement the circuit. It maps the circuit diagram directly into Verilog code.
 
-**File:** `full_adder/full_adder_gate_level.v`
+**File:** `full_adder_gate_level.v`
 
 ### Dataflow Level
 
 The Dataflow Level design of the Full Adder uses Boolean expressions to represent the sum and carry outputs, abstracting away the individual gates.
 
-**File:** `full_adder/full_adder_dataflow_level.v`
+**File:** `full_adder_dataflow_level.v`
 
 ### Behavioral Level
 
 The Behavioral Level design of the Full Adder uses `always` blocks to define the sum and carry outputs, focusing on high-level logic rather than gate details.
 
-**File:** `full_adder/full_adder_behavioral_level.v`
+**File:** `full_adder_behavioral_level.v`
 
 ## 4-bit Adder
 
@@ -109,27 +103,27 @@ The Behavioral Level design of the Full Adder uses `always` blocks to define the
 
 The 4-bit Adder at the Gate Level is implemented using instances of the Half Adder and Full Adder modules. It uses basic logic gates to create a ripple-carry adder.
 
-**File:** `four_bit_adder/four_bit_adder_gate_level.v`
+**File:** `four_bit_adder_gate_level.v`
 
 ### Dataflow Level
 
 The Dataflow Level design of the 4-bit Adder uses Boolean expressions and dataflow modeling techniques to describe the adder.
 
-**File:** `four_bit_adder/four_bit_adder_dataflow_level.v`
+**File:** `four_bit_adder_dataflow_level.v`
 
 ### Behavioral Level
 
 The Behavioral Level design of the 4-bit Adder uses high-level constructs and `always` blocks to describe the sum and carry operations.
 
-**File:** `four_bit_adder/four_bit_adder_behavioral_level.v`
+**File:** `four_bit_adder_behavioral_level.v`
 
 ## Test Benches
 
 Test benches are provided for each module to verify the correctness of the designs. Each test bench generates all possible input combinations to ensure the circuit behaves as expected.
 
-- **Half Adder Test Bench:** `half_adder/tb_half_adder.v`
-- **Full Adder Test Bench:** `full_adder/tb_full_adder.v`
-- **4-bit Adder Test Bench:** `four_bit_adder/tb_four_bit_adder.v`
+- **Half Adder Test Bench:** `tb_half_adder.v`
+- **Full Adder Test Bench:** `tb_full_adder.v`
+- **4-bit Adder Test Bench:** `tb_four_bit_adder.v`
 
 ## Getting Started
 
@@ -137,8 +131,8 @@ Test benches are provided for each module to verify the correctness of the desig
 
 To run the Verilog simulations, you'll need a Verilog simulation tool such as:
 
-- [ModelSim](https://www.mentor.com/company/higher_ed/modelsim-student-edition)
-- [Xilinx Vivado](https://www.xilinx.com/products/design-tools/vivado.html)
+- [ModelSim](https://www.intel.com/content/www/us/en/software-kit/750368/modelsim-intel-fpgas-standard-edition-software-version-18-1.html)
+- [AMD Vivado](https://www.xilinx.com/products/design-tools/vivado.html)
 - [Intel Quartus Prime](https://www.intel.com/content/www/us/en/software/programmable/quartus-prime/overview.html)
 
 ### Cloning the Repository
