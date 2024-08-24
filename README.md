@@ -140,8 +140,8 @@ To run the Verilog simulations, you'll need a Verilog simulation tool such as:
 Clone this repository to your local machine using:
 
 ```bash
-git clone https://github.com/ammarmalik17/verilog-adders.git
-cd verilog-adders
+git clone https://github.com/ammarmalik17/verilog_adders.git
+cd verilog_adders
 ```
 
 ## Running the Simulations
